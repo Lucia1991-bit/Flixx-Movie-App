@@ -1,3 +1,6 @@
+//DOMpurify 防止XSS攻擊（因為專案用了很多innerHTML）
+
+
 //建立Router
 const  global = {
   currentPage: window.location.pathname,
@@ -335,7 +338,7 @@ function displaySearchResults(results) {
           </div>
     `;
     document.querySelector("#search-results-heading").innerHTML = `
-            <h2>顯示${results.length}筆，共${global.search.totalResults} 筆包含「${global.search.term}」的搜尋結果</h2>
+            <h2>顯示${results.length}筆，共${global.search.totalResults} 筆包含「${DOMPurify.sanitize(global.search.term)}」的搜尋結果</h2>
     `;
 
     document.querySelector("#search-results").appendChild(movieCard);
@@ -518,6 +521,7 @@ function init() {
   switch (global.currentPage) {
     case "/":
     case "/index.html":
+    case "/Flixx-Movie-App/":
       displaySlider();
       displayPopularMovies();
       break;
