@@ -522,6 +522,7 @@ function init() {
     case "/":
     case "/index.html":
     case "/Flixx-Movie-App/":
+    case "/Flixx-Movie-App/index.html":
       displaySlider();
       displayPopularMovies();
       break;
