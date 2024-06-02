@@ -519,23 +519,21 @@ function init() {
   console.log("目前頁面:", global.currentPage);
 
   switch (global.currentPage) {
-    case "/":
-    case "/index.html":
     case "/Flixx-Movie-App/":
     case "/Flixx-Movie-App/index.html":
       displaySlider();
       displayPopularMovies();
       break;
-    case "/shows.html":
+    case "/Flixx-Movie-App/shows.html":
       displayPopularTVshows();
       break;
-    case "/movie-details.html":
+    case "/Flixx-Movie-App/movie-details.html":
       displayMovieDetails();
       break;
-    case "/tv-details.html":
+    case "/Flixx-Movie-App/tv-details.html":
       displayShowDetails();
       break;
-    case "/search.html":
+    case "/Flixx-Movie-App/search.html":
       search();
       break;
   }
